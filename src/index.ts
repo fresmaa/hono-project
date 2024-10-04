@@ -1,5 +1,4 @@
 import { Hono } from 'hono'
-import { createClient } from '@supabase/supabase-js';
 import { swaggerUI } from "@hono/swagger-ui";
 import { OpenAPIHono } from "@hono/zod-openapi";
 import { basicAuth } from 'hono/basic-auth'
