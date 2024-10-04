@@ -7,6 +7,7 @@ export default async (c: Context) => {
         const { data, error } = await supabase
             .from('users')
             .select('*')
+            .limit(10)
 
         if (error) {
             return c.json({ error: error.message }, 500);

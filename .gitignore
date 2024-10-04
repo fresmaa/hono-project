@@ -1,2 +1,16 @@
-# deps
-node_modules/
+node_modules
+build
+bun.lockb
+
+.env
+.env.development.local
+.env.test.local
+.env.production.local
+.env.local
+
+.DS_Store
+**/.DS_Store
+**/**/.DS_Store
+
+private-key.pem
+

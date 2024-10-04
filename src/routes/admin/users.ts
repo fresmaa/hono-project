@@ -25,7 +25,7 @@ app.openapi(
               schema: defaultResponseSchema,
             },
           },
-          description: 'Get data anak Success',
+          description: 'Get Data Users',
         },
         500: {
           content: {
