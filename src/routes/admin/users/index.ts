@@ -1,6 +1,6 @@
 import { createRoute, OpenAPIHono } from "@hono/zod-openapi";
-import { defaultResponseSchema, errorSchema } from "./schemas/users.schema";
-import usersHandler from "./handlers/users.handler";
+import { defaultResponseSchema, errorSchema } from "./index.schema";
+import usersHandler from "./index.handler";
 
 const app = new OpenAPIHono();
 
