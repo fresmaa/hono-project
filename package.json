@@ -4,6 +4,7 @@
     "dev": "bun run --hot src/index.ts"
   },
   "dependencies": {
+    "@elastic/ecs-winston-format": "^1.5.3",
     "@hono/swagger-ui": "^0.4.1",
     "@hono/zod-openapi": "^0.16.3",
     "@pgtyped/cli": "^2.3.0",

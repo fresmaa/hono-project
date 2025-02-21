@@ -1,10 +1,16 @@
 import { Hono } from "hono";
+import apmTrace from "./middleware/apm-trace";
+import apmLogger from "./middleware/log-winston";
 import { swaggerUI } from "@hono/swagger-ui";
 import { OpenAPIHono } from "@hono/zod-openapi";
 import { basicAuth } from "hono/basic-auth";
 import { routes } from "./routes";
 
+
 const app = new OpenAPIHono();
+
+app.use("*", apmTrace);
+app.use("*", apmLogger);
 
 app.use(
   "/doc",

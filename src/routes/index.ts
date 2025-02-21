@@ -5,10 +5,6 @@ import cuaca from "./cuaca";
 import dvdRental from "./dvd-rental";
 
 export const routes = (app: OpenAPIHono) => {
-  app.get("/", (c) => {
-    return c.json("Hello World Testing!");
-  });
-
   // Centralized Error Handler Middleware
   app.onError((err, c) => {
     console.error("Error:", err.message);
