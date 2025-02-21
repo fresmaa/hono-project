@@ -35,10 +35,5 @@ export const getListActor = async () => {
       querySpan?.end();
     }
 
-    result = result.map((row) => ({
-      id: row.actor_id,
-      name: row.first_name + ' ' +  row.last_name,
-    }));
-  
     return result;
 };

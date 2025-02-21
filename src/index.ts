@@ -1,7 +1,7 @@
-import { Hono } from 'hono'
+import { Hono } from "hono";
 import { swaggerUI } from "@hono/swagger-ui";
 import { OpenAPIHono } from "@hono/zod-openapi";
-import { basicAuth } from 'hono/basic-auth'
+import { basicAuth } from "hono/basic-auth";
 import { routes } from "./routes";
 
 const app = new OpenAPIHono();
@@ -11,7 +11,7 @@ app.use(
   basicAuth({
     username: process.env.SWAGGER_USERNAME ?? "admin",
     password: process.env.SWAGGER_PASSWORD ?? "password",
-  }),
+  })
 );
 
 app.get(
@@ -20,7 +20,7 @@ app.get(
     username: process.env.SWAGGER_USERNAME ?? "admin",
     password: process.env.SWAGGER_PASSWORD ?? "password",
   }),
-  swaggerUI({ url: "/doc" }),
+  swaggerUI({ url: "/doc" })
 );
 
 app.doc("/doc", {
@@ -38,4 +38,4 @@ app.doc("/doc", {
 
 routes(app);
 
-export default app
+export default app;
