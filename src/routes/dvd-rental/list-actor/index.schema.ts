@@ -2,6 +2,9 @@ import { z } from "zod";
 
 export const paramSchema = z.object({
   name: z.string(),
+  page: z.string().min(1, { message: "Halaman wajib diisi dan tidak boleh kosong." }),
+  size: z.string(),
+  search: z.string(),
 });
 
 export const listActorSchema = z.object({
