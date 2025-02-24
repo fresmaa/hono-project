@@ -1,0 +1,32 @@
+name: hoono-projects
+
+services:
+  app:
+    build:
+      context: .
+      args:
+        - PORT=${PORT}
+    env_file:
+      - .env
+    networks:
+      - dev
+    depends_on:
+      - redis
+    ports:
+      - "${PORT}:${PORT}"
+    volumes:
+      - ./:/app
+
+  redis:
+    image: "redis:7.2.5-alpine"
+    restart: always
+    environment:
+      - ALLOW_EMPTY_PASSWORD=yes
+    ports:
+      - "6379:6379"
+    networks:
+      - dev
+
+networks:
+  dev:
+    driver: bridge

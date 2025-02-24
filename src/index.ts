@@ -6,7 +6,6 @@ import { OpenAPIHono } from "@hono/zod-openapi";
 import { basicAuth } from "hono/basic-auth";
 import { routes } from "./routes";
 
-
 const app = new OpenAPIHono();
 
 app.use("*", apmTrace);
