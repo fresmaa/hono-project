@@ -11,3 +11,9 @@ LEFT JOIN
     public."film" film ON film_actor.film_id = film.film_id
 ORDER BY 
     actor.last_update DESC;
+
+/* @name countTotalActor */
+SELECT
+    COUNT(*) AS total_actor
+FROM
+    public."actor";

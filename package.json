@@ -1,7 +1,8 @@
 {
   "name": "hono-project",
   "scripts": {
-    "dev": "bun run --hot src/index.ts"
+    "dev": "bun run --hot src/index.ts",
+    "migrate": "bun run src/config/migrate.ts"
   },
   "dependencies": {
     "@elastic/ecs-winston-format": "^1.5.3",

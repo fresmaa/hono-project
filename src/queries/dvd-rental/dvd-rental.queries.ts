@@ -39,3 +39,31 @@ const getListActorsIR: any = {"usedParamSet":{},"params":[],"statement":"SELECT\
 export const getListActors = new PreparedQuery<IGetListActorsParams,IGetListActorsResult>(getListActorsIR);
 
 
+/** 'CountTotalActor' parameters type */
+export type ICountTotalActorParams = void;
+
+/** 'CountTotalActor' return type */
+export interface ICountTotalActorResult {
+  total_actor: string | null;
+}
+
+/** 'CountTotalActor' query type */
+export interface ICountTotalActorQuery {
+  params: ICountTotalActorParams;
+  result: ICountTotalActorResult;
+}
+
+const countTotalActorIR: any = {"usedParamSet":{},"params":[],"statement":"SELECT\n    COUNT(*) AS total_actor\nFROM\n    public.\"actor\""};
+
+/**
+ * Query generated from SQL:
+ * ```
+ * SELECT
+ *     COUNT(*) AS total_actor
+ * FROM
+ *     public."actor"
+ * ```
+ */
+export const countTotalActor = new PreparedQuery<ICountTotalActorParams,ICountTotalActorResult>(countTotalActorIR);
+
+

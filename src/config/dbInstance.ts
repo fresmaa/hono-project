@@ -30,8 +30,6 @@ export class DbInstance {
   private async initialize() {
     try {
       DbInstance.CacheClient = this.DbClient;
-      console.info(`Tesint`, this.user);
-
       await this.DbClient.connect();
       this.isConnected = true;
       console.info(`✅ Connected to Database`);
